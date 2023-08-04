@@ -18,15 +18,18 @@ function checkGuess() {
 
   if(userGuess === randomNumber) {
     lastResult.textContent = 'Congratulations! You got it right!';
+    lastResult.style.padding="10px";
     lastResult.style.backgroundColor = 'green';
     lowOrHi.textContent = '';
     setGameOver();
   } else if(guessCount === 10) {
     lastResult.textContent = '!!!GAME OVER!!!';
+    lastResult.style.padding="10px";
     lowOrHi.textContent = '';
     setGameOver();
   } else {
     lastResult.textContent = 'Wrong!';
+    lastResult.style.padding="10px";
     lastResult.style.backgroundColor = 'red';
     if(userGuess < randomNumber) {
       lowOrHi.textContent = 'Last guess was too low!';
